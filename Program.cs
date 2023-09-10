@@ -34,3 +34,46 @@ void Main()
 }
 Main();
 
+
+void task1()
+{
+    int component = 5;
+    string [] OridinalArray = CreateArray(component);
+    Console.WriteLine("Первоначальный массив: ");
+    Console.WriteLine($"[{String.Join(", ", OridinalArray.Select(s => $"\"{s}\""))}]");
+    Console.WriteLine("Отсортированный массив: ");
+    Console.WriteLine($"[{string.Join(", ", SortMassive(OridinalArray))}]");
+}
+
+
+string[] CreateArray(int m)
+{
+    string [] array = new string[m];
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write("Введите строку массива: ");
+        array[i] = Console.ReadLine()!;
+    }
+    return array;
+ }
+
+string[] SortMassive( string [] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)count++;
+    }
+    string[] FinalArray = new string[count];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3) 
+        {
+            FinalArray[j] = array[i];
+            j++;
+        }
+    }
+    return FinalArray;   
+}
+
