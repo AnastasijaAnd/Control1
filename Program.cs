@@ -15,7 +15,7 @@ void Main()
     {
         Console.WriteLine("Введите команду:"); 
         Console.WriteLine("task1 - если хотите создать массив");
-        Console.WriteLine("task2 - если выбираете заданный массив");
+        Console.WriteLine("task2 - если выбираете заданный условием задачи массив");
         Console.WriteLine(" out = закончить  ");
         string command = System.Console.ReadLine();
         switch (command)
