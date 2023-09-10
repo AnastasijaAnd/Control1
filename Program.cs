@@ -46,6 +46,25 @@ void task1()
 }
 
 
+void task2()
+{
+    string[] OridinalArray1 = new string[] {"Hello", "2", "world", ":-)"};
+    string[] OridinalArray2 = new string[] {"1234", "1567", "-2", "computer science"};
+    string[] OridinalArray3 = new string[] {"Russia", "Denmark", "Kazan"};
+    Console.WriteLine("Первоначальный массив 1: ");
+    PrintArray(OridinalArray1);
+    Console.WriteLine("Отсортированный массив 1: ");
+    Console.WriteLine($"[{string.Join(", ", SortMassive(OridinalArray1))}]");
+    Console.WriteLine("Первоначальный массив 2: ");
+    PrintArray(OridinalArray2);
+    Console.WriteLine("Отсортированный массив 2: ");
+    Console.WriteLine($"[{string.Join(", ", SortMassive(OridinalArray2))}]");
+    Console.WriteLine("Первоначальный массив 3: ");
+    PrintArray(OridinalArray3);
+    Console.WriteLine("Отсортированный массив 3: ");
+    Console.WriteLine($"[{string.Join(", ", SortMassive(OridinalArray3))}]");
+}
+
 string[] CreateArray(int m)
 {
     string [] array = new string[m];
@@ -75,5 +94,14 @@ string[] SortMassive( string [] array)
         }
     }
     return FinalArray;   
+}
+
+void PrintArray(string [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
 }
 
